@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Property Details</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      padding: 10px 20px;
+    }
+
+    header .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo a {
+      font-size: 2rem;
+      color: #1abc9c;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #fff;
+      background-color: #1abc9c;
+    }
+
+    .hamburger {
+      display: none;
+    }
+
+    .property-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      margin: 100px auto 2rem;
+      max-width: 900px;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+      padding: 8px;
+    }
+
+    .property-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .property-image {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .property-info {
+      padding: 3rem;
+      background-color: #fff;
+    }
+
+    .property-info h2 {
+      font-size: 2.2rem;
+      color: #333;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .property-info p {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .property-info p strong {
+      color: #1abc9c;
+    }
+
+    .booking-form {
+      background-color: #fff;
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .booking-form h2 {
+      color: #333;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .booking-form label {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .booking-form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .booking-form button {
+      width: 100%;
+      padding: 12px;
+      font-size: 1.2rem;
+      background-color: #1abc9c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .booking-form button:hover {
+      background-color: #16a085;
+    }
+
+    #booking-confirmation {
+      display: none;
+      color: #28a745;
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .property-card {
+        max-width: 100%;
+        margin: 10px;
+      }
+
+      .property-info {
+        padding: 1rem;
+      }
+
+      .booking-form {
+        padding: 1rem;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+      }
+
+      nav ul.show-nav {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+        font-size: 1.8rem;
+        cursor: pointer;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1 class="logo">
+        <a href="indexx.html">Epic-Escapes</a>
+      </h1>
+      <i class="fas fa-bars hamburger" id="hamburger">☰</i>
+      <nav id="nav">
+        <ul id="nav-links">
+          <li><a href="indexx.html#home">Home</a></li>
+          <li><a >Destinations</a></li>
+          <li><a >Experiences</a></li>
+          <li><a >Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="property-info" class="container">
+    <!-- Property info will be injected here -->
+  </section>
+
+  <!-- Booking Form -->
+  <section class="booking-form">
+    <h2>Book Your Stay</h2>
+    <form id="book-now-form">
+      <label for="checkin">Check-in:</label>
+      <input type="date" id="checkin" required>
+
+      <label for="checkout">Check-out:</label>
+      <input type="date" id="checkout" required>
+
+      <label for="guests">Guests:</label>
+      <input type="number" id="guests" min="1" max="10" value="1" required>
+
+      <button type="submit">Book Now</button>
+    </form>
+
+    <p id="booking-confirmation">
+      ✅ Booking Confirmed! Thank you for choosing Epic-Escapes.
+    </p>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Epic-Escapes — Travel made memorable.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Set today's date as minimum for check-in and check-out
+    const today = new Date().toISOString().split('T')[0];
+    const checkinInput = document.getElementById("checkin");
+    const checkoutInput = document.getElementById("checkout");
+
+    checkinInput.setAttribute("min", today);
+    checkoutInput.setAttribute("min", today);
+
+    checkinInput.addEventListener("change", () => {
+      const checkinDate = new Date(checkinInput.value);
+      checkinDate.setDate(checkinDate.getDate() + 1);
+      const minCheckout = checkinDate.toISOString().split('T')[0];
+      checkoutInput.setAttribute("min", minCheckout);
+    });
+
+    // Display property info from URL
+    window.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const name = params.get('name');
+      const location = params.get('location');
+      const price = params.get('price');
+      const rating = params.get('rating');
+      const image = params.get('image');
+
+      const propertyInfo = document.getElementById('property-info');
+
+      if (name && location && price && rating && image) {
+        propertyInfo.innerHTML = `
+          <div class="property-card">
+            <img src="${decodeURIComponent(image)}" alt="${decodeURIComponent(name)}" class="property-image" />
+            <div class="property-info">
+              <h2>${decodeURIComponent(name)}</h2>
+              <p><strong>Location:</strong> ${decodeURIComponent(location)}</p>
+              <p><strong>Price:</strong> ₹${decodeURIComponent(price)}/night</p>
+              <p><strong>Rating:</strong> ⭐ ${decodeURIComponent(rating)}</p>
+            </div>
+          </div>
+        `;
+      } else {
+        propertyInfo.innerHTML = `<p style="text-align:center;">Property information not found.</p>`;
+      }
+    });
+
+    // Booking form confirmation
+    document.getElementById("book-now-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.getElementById("booking-confirmation").style.display = "block";
+    });
+
+    // Mobile nav toggle
+    document.getElementById("hamburger").addEventListener("click", () => {
+      document.getElementById("nav-links").classList.toggle("show-nav");
+    });
+  </script>
+
+</body>
+</html>

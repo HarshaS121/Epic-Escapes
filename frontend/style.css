@@ -1,0 +1,986 @@
+/* Google Fonts */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+header .container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #1abc9c;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #1abc9c;
+}
+
+/* Hero Section */
+.hero {
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h2 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 12px 30px;
+  background-color: #1abc9c;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #16a085;
+}
+
+/* Destinations */
+.destinations {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #f8f8f8;
+}
+
+.destinations h2 {
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+/* Testimonials */
+.testimonials {
+  background-color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.testimonial p {
+  font-style: italic;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+.testimonial h4 {
+  margin-top: 1rem;
+  color: #1abc9c;
+}
+
+/* Footer */
+footer {
+  background-color: #1abc9c;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.socials {
+  margin-top: 10px;
+}
+
+.socials a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.socials a:hover {
+  color: #f1c40f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h2 {
+      font-size: 2.5rem;
+  }
+}
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #1abc9c;
+  border-color: #1abc9c;
+  background-color: rgba(26, 188, 156, 0.1);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+.hero-content h2 {
+  font-size: 2.5rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .hero-content h2 {
+      font-size: 2rem;
+  }
+  .hero-content p {
+      font-size: 1rem;
+  }
+}
+header nav ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  header nav ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+  }
+}
+.testimonials {
+  padding: 2rem;
+  text-align: center;
+}
+
+.testimonial p {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .testimonial p {
+      font-size: 1rem;
+      padding: 0 1rem;
+  }
+}
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Default menu layout */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 70px; /* adjust as needed */
+    right: 20px;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 999;
+  }
+
+  nav ul.show-links {
+    display: flex;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.search-bar {
+  padding: 0.75rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 1rem 0;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.search-bar:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.testimonials {
+  padding: 50px 20px;
+  background-color: #f8f8f8; /* light background for normal mode */
+  text-align: center;
+}
+
+.testimonial {
+  max-width: 600px;
+  margin: 20px auto;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #333; /* dark text color */
+  background: #ffffff; /* light card background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode fix */
+body.dark-mode .testimonials {
+  background-color: #1e1e1e; /* slightly lighter than full black */
+}
+
+body.dark-mode .testimonial {
+  background: #2a2a2a; /* dark card background */
+  color: #ffffff; /* pure white text inside card */
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.05);
+}
+.testimonials {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.testimonial-container {
+  position: relative;
+  max-width: 600px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+
+.testimonial {
+  display: none;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #333;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.5s ease;
+}
+
+.testimonial.active {
+  display: block;
+}
+
+.testimonial-buttons {
+  margin-top: 20px;
+}
+
+.testimonial-buttons button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.testimonial-buttons button:hover {
+  background-color: #555;
+}
+
+/* Dark Mode Support */
+body.dark-mode .testimonials {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .testimonial {
+  background: #2a2a2a;
+  color: #ffffff;
+}
+
+body.dark-mode .testimonial-buttons button {
+  background-color: #555;
+}
+
+body.dark-mode .testimonial-buttons button:hover {
+  background-color: #777;
+}
+.search-filters {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  background: #f2f2f2;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.search-filters input, 
+.search-filters select, 
+.search-filters button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.search-filters button {
+  background-color: #ff5a5f;
+  color: white;
+  cursor: pointer;
+}
+.property-details {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.property-details .main-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.property-details .details {
+  margin-top: 20px;
+}
+
+.property-details h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.property-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.property-details ul li {
+  margin: 5px 0;
+}
+
+
+/* Sticky Header */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  text-align: center;
+}
+
+.property-details {
+  max-width: 900px;
+  margin: 80px auto 30px; /* Adjust for sticky header */
+  padding: 20px;
+}
+
+.property-details .main-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
+header nav ul li {
+    font-size: 16px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #0073e6;
+}
+
+/* Card Styling */
+.card {
+    width: 300px;
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    background: #fff;
+}
+
+.card-content h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #555;
+}
+
+.card .price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0073e6;
+}
+
+/* Property Section Styling */
+.property-section {
+    padding: 50px 20px;
+    background: #fff;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.property-section h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.property-section p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.property-section img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Footer Styling */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .socials a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+footer .socials a:hover {
+    color: #0073e6;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .property-section img {
+        height: 250px;
+    }
+}
+.card-content p {
+  text-decoration: none; /* Remove underline */
+}
+.card img.clicked {
+  transform: scale(0.5); /* Make the image 80% of its original size */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+/* Remove underline under the whole card */
+.grid a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make the card content p tags clean */
+.card-content p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555; /* softer color */
+}
+
+/* On hover, maybe add a little shadow */
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+/* Make image smaller when clicked */
+.card img.clicked {
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+.card-content p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Smooth card hover effect */
+.card {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+/* Make image inside card zoom smoothly on hover */
+.card img {
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+.search-section {
+    padding: 2rem 0;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+#search-bar {
+    width: 80%;
+    max-width: 500px;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#search-bar:focus {
+    border-color:  #1abc9c;/* You can adjust this color to match your theme */
+    box-shadow: 0 0 8px rgba(255, 126, 95, 0.5);
+}
+.search-section {
+  padding: 2rem 0;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.search-container {
+  position: relative;
+  display: inline-block;
+  width: 80%;
+  max-width: 500px;
+}
+
+#search-bar {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 3rem; /* extra padding-left for icon */
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#search-bar:focus {
+  border-color: #ff7e5f;
+  box-shadow: 0 0 8px rgba(255, 126, 95, 0.5);
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 1.2rem;
+  pointer-events: none; /* Ensures it doesn't block input typing */
+  z-index: 1; /* Ensures it's above the input */
+}
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.villa-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 15px;
+  width: 320px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header .container {
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: white;
+    transition: 0.3s;
+    padding: 2rem;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+
+  .destinations {
+    padding: 2rem 1rem;
+  }
+
+  .card {
+    margin: 0 auto;
+    max-width: 350px;
+  }
+
+  .search-section {
+    padding: 1rem;
+  }
+
+  #search-bar {
+    width: 100%;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .socials {
+    margin-top: 1rem;
+  }
+}
+
+/* Mobile Navigation */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: white;
+    transition: 0.3s;
+    padding: 2rem;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+}
+
+/* Search Section */
+.search-section {
+  padding: 2rem;
+  background: #f8f8f8;
+}
+
+#search-bar {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+#search-bar:focus {
+  outline: none;
+  border-color: #1abc9c;
+  box-shadow: 0 0 5px rgba(26, 188, 156, 0.2);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section Spacing */
+section {
+  padding: 4rem 0;
+  position: relative;
+}
+
+/* Experiences Section */
+.experiences {
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.experiences h2 {
+  margin-bottom: 2rem;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #fff;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 2rem;
+}
+
+/* Adjust header height for fixed navigation */
+section {
+  scroll-margin-top: 100px; /* Increased from 80px to 100px to account for header height */
+}
+
+/* Property Section Specific Adjustments */
+.property-section {
+  scroll-margin-top: 120px; /* Extra margin for property section */
+  padding-top: 2rem; /* Add some padding at the top */
+}
